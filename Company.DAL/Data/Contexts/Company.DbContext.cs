@@ -12,7 +12,7 @@ namespace Company.DAL.Data.Contexts
     public class CompanyDbContexts : DbContext
     {
 
-        public CompanyDbContexts() : base() 
+        public CompanyDbContexts(DbContextOptions<CompanyDbContexts>options) : base(options) 
         {
             
         }
@@ -24,10 +24,10 @@ namespace Company.DAL.Data.Contexts
 
             base.OnModelCreating(modelBuilder);
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("server = LAPTOP-RMICPJR7 . ; Database = Company ; Trusted_Connection = True ; TrustServerCertificate = True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("server = LAPTOP-RMICPJR7 . ; Database = Company ; Trusted_Connection = True ; TrustServerCertificate = True");
+        //}
         public DbSet<Department> Departments  { get; set; }
     }
 }

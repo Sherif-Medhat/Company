@@ -13,9 +13,9 @@ namespace Comapny.BLL.repository
     {
         private CompanyDbContexts _context;
 
-        public DepatrmentRepository()
+        public DepatrmentRepository(CompanyDbContexts contexts)
         {
-            _context = new CompanyDbContexts();
+            _context = contexts;
         }
         public int Add(Department model)
         {
