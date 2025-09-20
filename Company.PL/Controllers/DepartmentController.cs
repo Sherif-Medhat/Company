@@ -17,5 +17,10 @@ namespace Company.PL.Controllers
             var departments = _departmentrepository.GetAll();
             return View(departments);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
