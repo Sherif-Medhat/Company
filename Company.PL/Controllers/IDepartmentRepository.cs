@@ -2,6 +2,7 @@
 {
     public interface IDepartmentRepository
     {
+        void Add();
         string? GetAll();
     }
 }

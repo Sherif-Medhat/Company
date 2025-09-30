@@ -11,7 +11,7 @@ namespace Comapny.BLL.repository
 {
     public class DepatrmentRepository : IDepartmentRepository
     {
-        private CompanyDbContexts _context;
+        private readonly CompanyDbContexts _context;
 
         public DepatrmentRepository(CompanyDbContexts contexts)
         {

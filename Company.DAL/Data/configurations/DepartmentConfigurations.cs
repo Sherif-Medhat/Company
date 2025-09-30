@@ -13,7 +13,9 @@ namespace Company.DAL.Data.configurations
     {
         public void Configure(EntityTypeBuilder<Department> builder)
         {
-            builder.Property(D => D.Id).UseIdentityColumn(10, 10);
+            builder.HasKey(d => d.Id);
+            builder.Property(d => d.Id).UseIdentityColumn(10, 10);
+
         }
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Company.DAL.Models
 {
-    public class Department : BaseEntity
+    internal class BaseEntity
     {
-        public DateTime CreatedDate { get; set; }
+        public int Id { get; set; }
+        public int Code { get; set; }
+        public string Name { get; set; }
     }
 }
